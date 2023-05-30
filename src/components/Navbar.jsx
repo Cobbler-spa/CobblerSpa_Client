@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
+import {Link} from 'react-router-dom'
 import { FaUserCircle } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { GiTireIronCross } from "react-icons/gi";
@@ -23,19 +24,19 @@ const Navbar = () => {
               className={activeTab === "tab1" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab1")}
             >
-              Home
+              <Link to='/'>Home</Link>
             </li>
             <li
               className={activeTab === "tab2" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab2")}
             >
-              About Us
+              <Link to='/about'>About Us</Link>
             </li>
             <li
               className={activeTab === "tab3" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab3")}
             >
-              Services
+               <Link to='/services'>Services</Link>
             </li>
             <li
               className={activeTab === "tab4" ? "navLink active" : "navLink"}
@@ -47,7 +48,7 @@ const Navbar = () => {
               className={activeTab === "tab5" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab5")}
             >
-              Pricing
+               <Link to='/pricing'>Pricing</Link>
             </li>
             <li
               className={activeTab === "tab6" ? "navLink active" : "navLink"}
@@ -59,13 +60,13 @@ const Navbar = () => {
               className={activeTab === "tab7" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab7")}
             >
-              Policy
+              <Link to='/policy'>Policy</Link>
             </li>
             <li className="navLink">
               <FaUserCircle
                 style={{ marginRight: "8px", fontSize: "1.4rem" }}
               />
-              Login
+               <Link to='/login'>login</Link>
             </li>
             
           </ul>
