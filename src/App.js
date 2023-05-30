@@ -1,6 +1,6 @@
 import React from 'react'
 import { ToastContainer } from "react-toastify";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import {  Routes, Route } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import AboutApp from './pages/About'
