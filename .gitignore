@@ -25,7 +25,7 @@ yarn-error.log*
 
 # stylesheet
 # Ignore compiled CSS files
-styles/styles.css.map
+styles/*.css.map
 
 # Ignore all SCSS files inside the styles folder
 styles/*.scss
