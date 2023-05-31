@@ -6,7 +6,7 @@ import { MdSavings } from "react-icons/md";
 const Services = () => {
   return (
     <section id='ServiceSection' style={{backgroundImage : `url(${imgurl})`}}>        
-               <p className='sectionHeading'>Services</p>
+               <p className='sectionHeading'>Our Specialities</p>
                <div className='underline'></div>
                <div className='servicesContainer' style={{display:"flex", justifyContent:"space-evenly", alignItems:"center"}}>
                 <article className='serviceBlock container'>

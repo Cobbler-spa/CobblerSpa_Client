@@ -26,12 +26,7 @@ const Navbar = () => {
             >
               <Link to='/' style={{color:"white", textDecoration:"none"}}>Home</Link>
             </li>
-            <li
-              className={activeTab === "tab2" ? "navLink active" : "navLink"}
-              onClick={() => changeTab("tab2")}
-            >
-              <Link to='/about' style={{color:"white", textDecoration:"none"}}>About Us</Link>
-            </li>
+            
             <li
               className={activeTab === "tab3" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab3")}
@@ -51,6 +46,12 @@ const Navbar = () => {
                <Link to='/pricing' style={{color:"white", textDecoration:"none"}}>Pricing</Link>
             </li>
             <li
+              className={activeTab === "tab2" ? "navLink active" : "navLink"}
+              onClick={() => changeTab("tab2")}
+            >
+              <Link to='/about' style={{color:"white", textDecoration:"none"}}>About Us</Link>
+            </li>
+            <li
               className={activeTab === "tab6" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab6")}
             >
@@ -60,7 +61,7 @@ const Navbar = () => {
               className={activeTab === "tab7" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab7")}
             >
-              <Link to='/policy' style={{color:"white", textDecoration:"none"}}>Policy</Link>
+              <Link to='/blog' style={{color:"white", textDecoration:"none"}}>Blogs</Link>
             </li>
             <li className="navLink">
               <FaUserCircle

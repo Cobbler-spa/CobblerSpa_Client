@@ -28,11 +28,6 @@
   list-style: none;
   text-decoration: none;
   transition: all 0.3s ease-in;
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 2px;
-  font-family: 'Poppins', sans-serif;
-  font-weight:600;
 }
 .navigationHead .navDiv .navLinks .navLink.active {
   -webkit-text-decoration: underline solid 2px red;
