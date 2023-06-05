@@ -4,6 +4,8 @@
   top: 0%;
   width: 100%;
   z-index: 999;
+  font-family: "poppins";
+  font-weight:normal;
 }
 .navigationHead .navDiv {
   display: flex;
@@ -12,7 +14,7 @@
   width: 100%;
 }
 .navigationHead .navDiv .Burger {
-  display: block;
+  display: none;
 }
 .navigationHead .navDiv .navLinks {
   display: flex;
@@ -24,9 +26,11 @@
 }
 .navigationHead .navDiv .navLinks .navLink {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: normal;
+  letter-spacing: 2px;
   list-style: none;
   text-decoration: none;
+  text-transform: uppercase;
   transition: all 0.3s ease-in;
 }
 .navigationHead .navDiv .navLinks .navLink.active {
@@ -34,7 +38,7 @@
           text-decoration: underline solid 2px red;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 800px) {
   .navLink {
     width: 90%;
     display: none;
@@ -42,10 +46,9 @@
   .navDiv {
     padding-top: 1rem;
   }
-  .Burger {
+  .navigationHead .navDiv .Burger {
     display: block;
-    font-size: 1.2rem;
-    color: red;
+    font-size: 1.4rem;
   }
 }
 .Resp_nav {

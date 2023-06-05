@@ -3,23 +3,9 @@ import React from "react";
 const About = () => {
   return (
     <>
-      <section
-        style={{
-          backgroundColor: "black",
-          textAlign: "center",
-          width: "100vw",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          padding:"2rem 0"
-        }}
-      >
+      <section id="aboutSection">
         <div
-          className="ourWorkHeading"
-          style={{
-            width: "40%",
-          }}
-        >
+          className="ourWorkHeading">
           <p
             style={{
               color: "whitesmoke",
@@ -33,7 +19,7 @@ const About = () => {
           >
             About Us
           </p>
-          <div></div>
+          <div className="underline"></div>
           <p style={{color:"white"}}>
             Cobbler Spa is more than just a shoe laundry service - we are the
             epitome of luxury and style. At Cobbler Spa, we are Third

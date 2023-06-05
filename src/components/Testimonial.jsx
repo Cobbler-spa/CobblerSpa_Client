@@ -30,8 +30,8 @@ const Testimonial = () => {
   return (
     <section id="testimonialSection">
       <p className="TestimonialHeading">What people Like ABout Us?</p>
-      <div className="Testi_underline"></div>
-      <div className="container" style={{width:"60%"}}>
+      <div className="underline"></div>
+      <div className="container" style={{width:"80%"}}>
         <article className="review">
           <div className="img-container">
             <img src={image} alt={name} className="person-img" />

@@ -37,10 +37,9 @@ const Footer = () => {
       <MDBContainer >
         <Link to='/' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>Home</Link>
         <Link to='/about' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>About Us</Link>
-        <Link to='/testimonials' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>Testimonials</Link>
         <Link to='/services' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>Services</Link>
-        <Link to='/policy' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>Our Work</Link>
-        <Link to='/pricing' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>About Us</Link>
+        <Link to='/policy' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>Policy</Link>
+        <Link to='/about' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>About Us</Link>
         <Link to='/pricing' style={{margin:"8px", textDecoration:"none", color:"whitesmoke"}}>Price Guide</Link>
         <div style={{width:"8rem", height:"0.20rem", color:"whitesmoke", backgroundColor:"white", margin:" 12px auto"}}></div>
       </MDBContainer>
