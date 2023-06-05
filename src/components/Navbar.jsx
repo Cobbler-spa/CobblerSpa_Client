@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { GiTireIronCross } from "react-icons/gi";
 import ResNav from "./ResNav";
 
+
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState("tab1");
   const [showMenu, setShowMenu] = useState(false);
@@ -15,6 +16,13 @@ const Navbar = () => {
   const removeResMenu=()=>{
     setShowMenu(false)
   }
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <header className="navigationHead">
@@ -26,12 +34,7 @@ const Navbar = () => {
             >
               <Link to='/' style={{color:"white", textDecoration:"none"}}>Home</Link>
             </li>
-            <li
-              className={activeTab === "tab2" ? "navLink active" : "navLink"}
-              onClick={() => changeTab("tab2")}
-            >
-              <Link to='/about' style={{color:"white", textDecoration:"none"}}>About Us</Link>
-            </li>
+            
             <li
               className={activeTab === "tab3" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab3")}
@@ -42,7 +45,7 @@ const Navbar = () => {
               className={activeTab === "tab4" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab4")}
             >
-              Our Work
+            <Link to='/work' style={{color:"white", textDecoration:"none"}}>Our Work</Link>
             </li>
             <li
               className={activeTab === "tab5" ? "navLink active" : "navLink"}
@@ -51,20 +54,31 @@ const Navbar = () => {
                <Link to='/pricing' style={{color:"white", textDecoration:"none"}}>Pricing</Link>
             </li>
             <li
+              className={activeTab === "tab2" ? "navLink active" : "navLink"}
+              onClick={() => changeTab("tab2")}
+            >
+              <Link to='/about' style={{color:"white", textDecoration:"none"}}>About Us</Link>
+            </li>
+            <li
               className={activeTab === "tab6" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab6")}
             >
-              Contact
+            <span
+                onClick={() => scrollToSection("contact")}
+                style={{ cursor: "pointer", color: "white", textDecoration: "none" }}
+              >
+                Contact
+              </span>
             </li>
             <li
               className={activeTab === "tab7" ? "navLink active" : "navLink"}
               onClick={() => changeTab("tab7")}
             >
-              <Link to='/policy' style={{color:"white", textDecoration:"none"}}>Policy</Link>
+              <Link to='/blog' style={{color:"white", textDecoration:"none"}}>Blogs</Link>
             </li>
             <li className="navLink">
               <FaUserCircle
-                style={{ marginRight: "8px", fontSize: "1.4rem" }}
+                style={{ marginRight: "8px", fontSize: "1.4rem" , color:"white"}}
               />
                <Link to='/login' style={{color:"white", textDecoration:"none"}}>login</Link>
             </li>
