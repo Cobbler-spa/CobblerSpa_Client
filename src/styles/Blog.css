@@ -1,0 +1,61 @@
+#singleBlog {
+    width: 100vw;
+    background: black;
+    padding-top: 5rem;
+    overflow: hidden;
+  }
+  
+  .blogContainer {
+    width: 100%;
+    background: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #singleBlog .blogContainer .blogBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto;
+    width: 70%;
+    padding: 2rem;
+    background-color: whitesmoke;
+    font-family: 'poppins';
+  }
+
+  
+  
+  .blogTitle {
+    font-family:  'oswald','poppins';
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+  }
+  
+  .userInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    align-items: flex-end;
+    font-family: 'poppins';
+  }
+  
+  .userInfo .userName{
+    font-size: 1.2rem;
+  }
+  .userInfo .time{
+    font-size: smaller;
+    font-weight: lighter;
+  }
+  .blogBox img{
+    margin-bottom: 2rem;
+  }
+  @media (max-width:768px) {
+    .blogBox {
+      width: 100%;
+    }
+  }

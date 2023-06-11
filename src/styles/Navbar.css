@@ -6,6 +6,14 @@
   z-index: 999;
   font-family: "poppins";
   font-weight:normal;
+  transition: all 0.4s ease-in;
+}
+
+.navigationHead.Navbar-bg {
+  box-shadow: 2px 2px 8px 1px grey;
+  background-color: rgba(70, 63, 63, 0.368);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .navigationHead .navDiv {
   display: flex;
@@ -15,6 +23,10 @@
 }
 .navigationHead .navDiv .Burger {
   display: none;
+}
+
+.navigationHead .userProfile{
+  display: block;
 }
 .navigationHead .navDiv .navLinks {
   display: flex;
@@ -29,6 +41,7 @@
   font-weight: normal;
   letter-spacing: 2px;
   list-style: none;
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease-in;
@@ -43,33 +56,56 @@
     width: 90%;
     display: none;
   }
+  .userProfile{
+    display: none;
+    background-color: rebeccapurple;
+  }
   .navDiv {
     padding-top: 1rem;
   }
   .navigationHead .navDiv .Burger {
     display: block;
     font-size: 1.4rem;
+    background-color: black;
+    color: white;
+    margin: 0 2rem;
+    width: 4rem;
+    height: 4rem;
+    padding: 0.6rem;
+    z-index: 999;
   }
 }
 .Resp_nav {
   width: 100%;
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-height: 0;
+  height: 100vh;
   position: fixed;
   z-index: 998;
-  top: 3.5rem;
+  top: -100%;
   left: 0;
   right: 0;
-  transition: all 0.3s ease-in-out;
-  background-color: rgba(255, 255, 255, 0.15);
+  opacity: 0;
+  transition: all 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  background-color: rgba(10, 7, 7, 0.629);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
+  padding: 4rem 0;
 }
+
+.Resp_nav.show {
+  transform: translateY(100%); /* Slide the element into view */
+  opacity: 1;
+}
+
+
 
 .Resp_nav .Res_links {
   padding: 0.3rem;
   transition: all 0.3s linear;
-  width: 6rem;
+  width: 18rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -79,11 +115,14 @@
 }
 
 .Resp_nav .Res_links .Res_link {
-  color: rgb(52, 51, 51);
-  font-weight: 700;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  font-weight: 600;
   position: relative;
   text-align: center;
   cursor: pointer;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
 }
 
 .Resp_nav .Res_links .Res_link::after {

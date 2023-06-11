@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import imgurl from '../Assets/ServicesImg.jpeg'
 import { GiSonicShoes } from "react-icons/gi";
 import { AiOutlineVerified } from "react-icons/ai";
 import { MdSavings } from "react-icons/md";
+import ScrollReveal from "scrollreveal";
 const Services = () => {
+ 
+  useEffect(()=>{
+    const sr = ScrollReveal({
+      origin: "bottom",
+      duration: 2000,
+      distance: "80px",
+      reset: false,
+    });
+
+    sr.reveal(`.serviceBlock`, { opacity: 0, interval: 300 });
+  },[])
+  
   return (
     <section id='ServiceSection' style={{backgroundImage : `url(${imgurl})`}}>        
                <p className='sectionHeading'>Our Specialities</p>
