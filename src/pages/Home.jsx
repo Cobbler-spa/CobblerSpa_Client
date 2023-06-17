@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import '../styles/Home.css'
 import Parallax from '../components/Parallax'
 import logo from '../Assets/LOGO.jpg'
@@ -10,9 +10,14 @@ import About from '../components/About'
 import Partners from '../components/Partners'
 import Contact from '../components/Contact'
 import OurServices from '../components/OurServices'
-
+import ReactGa from 'react-ga'
 const Home = () => {
     const hero =  {imgurl:heroImg2, title:"COBBLER SPA", logo:logo}
+
+      useEffect(()=>{
+        ReactGa.pageview(window.location.pathname)
+    })
+    
   return (
     <>
         <Parallax AboutData={hero}/>
