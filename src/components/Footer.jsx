@@ -50,7 +50,7 @@ const Footer = () => {
           <MDBRow className="d-flex justify-content-center">
             <MDBCol size="auto" className="mb-4 mb-md-0">
               <p className="pt-2">
-                <strong>Sign up for our newsletter</strong>
+                <p style={{fontFamily:"poppins", letterSpacing:"2px"}}>Sign up for offers</p>
               </p>
             </MDBCol>
 
@@ -63,7 +63,7 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 contrast
-                style={{ color: "black" }}
+                style={{ color: "black", background:"black" }}
               />
             </MDBCol>
 
@@ -76,7 +76,7 @@ const Footer = () => {
         </form>
       </MDBContainer>
 
-      <MDBContainer>
+      <MDBContainer style={{fontFamily:"poppins"}}>
         <Link
           to="/"
           style={{ margin: "8px", textDecoration: "none", color: "whitesmoke" }}
@@ -90,12 +90,20 @@ const Footer = () => {
           About Us
         </Link>
         {
-          (user && user.role === 'admin') ? (<Link
+          (user && user.role === 'admin') ? (<>
+          <Link
             to="/addblog"
             style={{ margin: "8px", textDecoration: "none", color: "whitesmoke" }}
           >
             Add Blog
-          </Link>):(<Link
+          </Link>
+          <Link
+            to="/addadmin"
+            style={{ margin: "8px", textDecoration: "none", color: "whitesmoke" }}
+          >
+            Add Admin
+          </Link>
+          </>):(<Link
             to="/services"
             style={{ margin: "8px", textDecoration: "none", color: "whitesmoke" }}
           >
@@ -108,12 +116,7 @@ const Footer = () => {
         >
           Policy
         </Link>
-        <Link
-          to="/about"
-          style={{ margin: "8px", textDecoration: "none", color: "whitesmoke" }}
-        >
-          About Us
-        </Link>
+        
         <Link
           to="/pricing"
           style={{ margin: "8px", textDecoration: "none", color: "whitesmoke" }}
@@ -190,7 +193,7 @@ const Footer = () => {
 
       <div
         className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)", fontFamily:"poppins" }}
       >
         © 2023 Copyright:
         <a className="text-white" href="mailto:support@cobblerspa.com">

@@ -24,6 +24,7 @@ import Blogs from './pages/Blogs';
 import BookNowButton from './components/BookNowButton';
 import SingleBlog from './pages/SingleBlog';
 import AddBlog from './pages/AddBlog';
+import Pricing from './pages/Pricing';
 const App = () => {
 
   const dispatch = useDispatch()
@@ -60,6 +61,7 @@ const App = () => {
         <Route path="/blog" element={<Blogs/>}/>
         <Route path="/policy" element={<Policy/>}/>
         <Route path="/work" element={<OurWork/>}/>
+        <Route path="/pricing" element={<Pricing/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/blog/:id" element={<SingleBlog/>}/>
         <Route path="/addadmin" element={<PrivateRoute><AddAdmin/></PrivateRoute>}/>

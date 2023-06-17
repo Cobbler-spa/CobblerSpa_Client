@@ -20,7 +20,7 @@ const About = () => {
             About Us
           </p>
           <div className="underline"></div>
-          <p style={{color:"white"}}>
+          <p style={{color:"white",letterSpacing:"1px", fontFamily:"poppins", fontSize:"1rem"}}>
             Cobbler Spa is more than just a shoe laundry service - we are the
             epitome of luxury and style. At Cobbler Spa, we are Third
             generational Cobblers passionate about providing a premium shoe and

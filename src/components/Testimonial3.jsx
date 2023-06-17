@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import "../styles/Home.css"
-import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
 import data from '../Utility/TestiData.js'
-import { MDBCard,MDBIcon, MDBTypography, MDBCardBody } from "mdb-react-ui-kit";
+import { MDBCard, MDBCardBody } from "mdb-react-ui-kit";
 const SimpleSlider = () => {
   const [sliderSettings] = useState({
     dots: true,

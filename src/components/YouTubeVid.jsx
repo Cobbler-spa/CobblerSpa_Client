@@ -30,6 +30,7 @@ const YouTubeVid = () => {
         >
           How it's done
         </p>
+        <div className='underline'></div>
         <div className='video-container' style={{width:"100%", height:"100%"}}>
         <YouTube videoId={videoId}
       opts={playerOptions}
