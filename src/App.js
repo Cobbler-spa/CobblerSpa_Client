@@ -25,6 +25,11 @@ import BookNowButton from './components/BookNowButton';
 import SingleBlog from './pages/SingleBlog';
 import AddBlog from './pages/AddBlog';
 import Pricing from './pages/Pricing';
+import ReactGa from 'react-ga'
+
+
+const TRACKING_ID = "G-PY0LBQRXTB"
+ReactGa.initialize(TRACKING_ID)
 const App = () => {
 
   const dispatch = useDispatch()

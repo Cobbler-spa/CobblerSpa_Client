@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   MDBCard,
@@ -15,6 +15,7 @@ import { toast } from "react-toastify";
 import { useSelector,useDispatch } from "react-redux";
 import { validateEmail, validatePassword } from "../helper/Validator";
 import {  setToken, setUser } from "../redux/features/authSlice";
+import ReactGa from 'react-ga'
 const initialState = {
   email: "",
   password: "",
@@ -31,7 +32,9 @@ const Login = () => {
     setFormvalue({ ...formValue, [name]: value });
   };
 
-  
+  useEffect(()=>{
+    ReactGa.pageview(window.location.pathname)
+})
 
   const handleSubmit = async (e) => {
     e.preventDefault();

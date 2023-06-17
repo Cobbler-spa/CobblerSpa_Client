@@ -11,7 +11,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'react-quill/dist/quill.snow.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
