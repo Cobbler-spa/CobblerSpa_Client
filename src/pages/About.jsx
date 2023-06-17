@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
 import "../styles/About.css";
-import About from "../components/AboutHelper";
 import Parallax from "../components/Parallax";
-import AboutData2 from "../Utility/AboutData2";
-import TeamData from "../Utility/TeamData";
-import AboutDecor from "../components/AboutDecor";
 import AboutData from "../Utility/AboutData";
+import ReactGa from 'react-ga'
 const AboutApp = () => {
   useEffect(() => {
     window.scroll({
@@ -13,6 +10,10 @@ const AboutApp = () => {
       behavior: "smooth",
     });
   }, []);
+  
+  useEffect(()=>{
+      ReactGa.pageview(window.location.pathname)
+  },[])
   return (
     <>
       <Parallax AboutData={AboutData[0]} />
