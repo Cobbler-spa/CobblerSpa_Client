@@ -1,5 +1,5 @@
 import React from "react";
-import hero from "../Assets/HeroText.jpeg";
+import hero from "../Assets/ServicesImg.jpeg";
 const Policy = () => {
   const styles = {
     background: "rgba(148, 148, 148, 0.19)",
@@ -8,7 +8,7 @@ const Policy = () => {
     backdropFilter: "blur(7.4px)",
     WebkitBackdropFilter: "blur(7.4px)",
     border: "1px solid rgba(148, 148, 148, 0.53)",
-    color: "white",
+    color: "black",
     fontFamily:"oswald, poppins, sans-serif",
     marginTop:"6rem",
     padding:"1rem"

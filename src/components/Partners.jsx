@@ -21,7 +21,7 @@ const Partners = () => {
                     <img src='https://i.pinimg.com/originals/e9/69/95/e96995312a7fbf4bd2e1f796e4618461.png' alt='Offwhite'/>
                 </article>
                 <article className='partnerSlide'>
-                    <img src='https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/six0e2v2jerlgdhftd6p' alt='adidas'/>
+                    <img src='https://pngimg.com/uploads/gucci/gucci_PNG28.png' alt='adidas'/>
                 </article>
                 <article className='partnerSlide'>
                     <img src='https://m.media-amazon.com/images/G/01/2018/skechers/Skechers-250._CB496141595_.png' alt='adidas'/>
@@ -42,7 +42,7 @@ const Partners = () => {
                     <img src='https://i.pinimg.com/originals/e9/69/95/e96995312a7fbf4bd2e1f796e4618461.png' alt='Offwhite'/>
                 </article>
                 <article className='partnerSlide'>
-                    <img src='https://res-2.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/six0e2v2jerlgdhftd6p' alt='adidas'/>
+                    <img src='https://pngimg.com/uploads/gucci/gucci_PNG28.png' alt='adidas'/>
                 </article>
                 <article className='partnerSlide'>
                     <img src='https://m.media-amazon.com/images/G/01/2018/skechers/Skechers-250._CB496141595_.png' alt='adidas'/>

@@ -1,7 +1,18 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "../styles/Home.css";
+import ScrollReveal from "scrollreveal";
 import { Link } from "react-router-dom";
 const OurWork = () => {
+  useEffect(()=>{
+    const sr = ScrollReveal({
+      origin: "bottom",
+      duration: 2000,
+      distance: "80px",
+      reset: false,
+    });
+
+    sr.reveal(`.workContainer`, { opacity: 0, interval: 300 });
+  },[])
   return (
     <>
       <section id="ourWorkSection">

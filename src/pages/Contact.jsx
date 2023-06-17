@@ -1,15 +1,14 @@
-import React from "react";
+import React from 'react'
 import "../styles/Home.css";
 
 import { BsFillTelephoneFill, BsWhatsapp } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import { BiSupport } from "react-icons/bi";
-
 const Contact = () => {
   return (
     <>
-      <section id="contactSection">
+      <section id="contactSection" style={{paddingTop:"5rem"}}>
         <p className="contactHeading">Contact Us</p>
         <div className="underline"></div>
         <div className="contactUsContainer container">
@@ -34,7 +33,7 @@ const Contact = () => {
                 </li>
                 <li>
                   <AiOutlineMail style={{marginRight:"8px",fontSize:"x-large", fontWeight:"bold"}}/> :-{" "}
-                  <a href="mailto:support@cobblerspa.com " >support@cobblerspa.com </a>
+                  <a href="mailto:info@cobblerspa.com " >info@cobblerspa.com </a>
                 </li>
               </ul>
 
@@ -84,7 +83,7 @@ const Contact = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

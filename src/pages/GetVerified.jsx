@@ -6,8 +6,8 @@ import {
   MDBCardFooter,
   MDBValidation,
   MDBBtn,
-  MDBIcon,
-  MDBSpinner,
+  // MDBIcon,
+  // MDBSpinner,
   MDBValidationItem,
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +39,7 @@ const GetVerified = () => {
 
     try {
       const response = await fetch(
-        "https://cobbler-backend-5hgv.vercel.app/api/v1/users/sendToken",
+        "http://localhost:5000/api/v1/users/sendToken",
         {
           method: "POST",
           headers: {
@@ -66,7 +66,7 @@ const GetVerified = () => {
     if (phoneNumber && OTP) {
       try {
         const response = await fetch(
-          "https://cobbler-backend-5hgv.vercel.app/api/v1/users/verify",
+          "http://localhost:5000/api/v1/users/verify",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -77,10 +77,16 @@ const GetVerified = () => {
           }
         );
 
-        const data =await response.json()
-        console.log(data)
-        toast.success("verification Done");
-        navigate('/register')
+        if(response.ok){
+          const data =await response.json()
+          console.log(data)
+          toast.success("verification Done");
+          navigate('/register')
+        }
+        else{
+          console.log("DK")
+          toast.error("heh")
+        }
       } catch (error) {
         console.log(error);
         toast.error("Something");
@@ -183,8 +189,8 @@ const GetVerified = () => {
                   type="submit"
                   style={{
                     width: "95%",
-                    backgroundColor: "orange",
-                    color: "black",
+                    backgroundColor: "black",
+                    color: "white",
                     fontWeight: "500",
                     letterSpacing: "1px",
                     display: "block",

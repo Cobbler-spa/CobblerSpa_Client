@@ -13,8 +13,7 @@ import {
 import { Link,useNavigate } from "react-router-dom";
 import { validatePhone } from "../helper/Validator";
 import { toast } from "react-toastify";
-import { setToken, setUser } from "../redux/features/authSlice.js";
-import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 
 const initialState = {
@@ -28,11 +27,13 @@ const initialState = {
   address:""
 };
 
-const Register = () => {
+const AddAdmin = () => {
   const [formValue, setFormvalue] = useState(initialState);
   const { email, password, firstName, lastName, confirmPassword, newsLetterCheck, phoneNumber,address } = formValue;
   const navigate=useNavigate();
-  const dispatch = useDispatch()
+
+  const {user} = useSelector((state)=>({...state.auth}))
+
   const onInput = (e) => {
     const { name, value } = e.target;
 
@@ -44,59 +45,48 @@ const Register = () => {
     console.log(formValue)
   }
 
-  const handleSubmit = async(e)=>{
-
+  const handleSubmit = async (e) => {
     e.preventDefault();
+  
     if (!validatePhone) {
       return toast.error("Invalid Mobile Number");
     }
-    if(firstName && lastName && email && address && phoneNumber && password){
-
-      
+  
+    if (firstName && lastName && email && address && phoneNumber && password) {
       try {
-        const response = await fetch("http://localhost:5000/api/v1/users/signup", {
-          method:'POST',
+        const response = await fetch("http://localhost:5000/api/v1/users/addadmin", {
+          method: 'POST',
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
             firstName: firstName,
-            email:email,
-            lastName:lastName,
-            password:password,
-            newsLetterCheck:newsLetterCheck,
+            email: email,
+            lastName: lastName,
+            password: password,
+            newsLetterCheck: newsLetterCheck,
             phoneNumber: phoneNumber,
-            address:address
+            address: address,
+            userId: user?.id
           }),
-        })
-        
-        if(response.ok){
-          const resp = await response.json();
-          const { user, token } = resp.data;
-          
+        });
+  
+        if (response.ok) {
           // Save user details and token in localStorage
-          localStorage.setItem("user", JSON.stringify(user));
-          localStorage.setItem("token", token);
-          dispatch(setUser(user))
-          dispatch(setToken(token))
-          toast.success("Logged In successfully")
-          navigate('/')
-        }
-        else{
+          toast.success("Logged In successfully");
+          navigate('/');
+        } else {
           const errorData = await response.json();
-        toast.error(errorData.message);
+          toast.error(errorData.message);
         }
       } catch (error) {
-        console.log(error)
-        toast.error("some")
+        console.log(error);
+        toast.error("Something went wrong");
       }
+    } else {
+      toast.error("Something went wrong");
     }
-    else{
-      console.log(firstName)
-      toast.error("not all filled")
-    }
-      
-  }
+  };
   return (
     <>
       <div
@@ -279,4 +269,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default AddAdmin;

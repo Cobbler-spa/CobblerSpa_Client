@@ -1,25 +1,18 @@
 import React from "react";
 import "../styles/Navbar.css";
 import { FaUserCircle } from "react-icons/fa";
-const ResNav = ({ removeResMenu }) => {
-  // const scrollToTOp = () => {
-  //   window.scrollTo(0, 0);
-  //   removeResMenu();
-  // };
-  // const scrollToSkills = () => {
-  //   window.scrollTo(0, 800);
-  //   removeResMenu();
-  // };
-  // const scrollToProjects = () => {
-  //   window.scrollTo(0, 2300);
-  //   removeResMenu();
-  // };
-  // const scrollToConatact = () => {
-  //   window.scrollTo(0, 2870);
-  //   removeResMenu();
-  // };
+import { setLogout } from "../redux/features/authSlice";
+import { useDispatch } from "react-redux";
+const ResNav = ({ removeResMenu, showMenu }) => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  const dispatch = useDispatch()
+
+  const handleLogout= ()=>{
+    dispatch(setLogout())
+    removeResMenu()
+  }
   return (
-    <div className="Resp_nav">
+    <div className={`Resp_nav ${showMenu ? "show" : ""}`}>
       <ul className="Res_links">
         <li className="Res_link" onClick={() => removeResMenu()}>
           
@@ -49,10 +42,21 @@ const ResNav = ({ removeResMenu }) => {
           Policy
         </li>
         <li className="Res_link">
-              <FaUserCircle
-                style={{ marginRight: "8px", fontSize: "1.4rem" }}
-              />
-              Login
+              {
+                user ? (<>
+                  <FaUserCircle
+                    style={{ marginRight: "8px", fontSize: "1.4rem" }}
+                  />
+                  <span>{user?.name}</span>
+                  <p className="mt-4" onClick={handleLogout}>Log Out</p>
+                  </>
+                ):(<>
+                <FaUserCircle
+                  style={{ marginRight: "8px", fontSize: "1.4rem" }}
+                />
+                <span>Login</span>
+                </>)
+              }
             </li>
       </ul>
     </div>

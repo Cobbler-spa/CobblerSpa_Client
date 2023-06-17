@@ -50,7 +50,7 @@ const authSlice = createSlice({
     [login.pending]: (state, action) => {
       state.loading = true
     },
-    [login.fullfilled]: (state, action) => {
+    [login.fulfilled]: (state, action) => {
       state.loading = false
       console.log(action.payload)
       const {

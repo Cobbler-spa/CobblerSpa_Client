@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const API = axios.create({baseURL:"https://cobbler-backend-5hgv.vercel.app"});
+const API = axios.create({baseURL:"http://localhost:5000/api/v1"});
 
 export const signIn = async (formData) => {
     try {
@@ -9,7 +9,7 @@ export const signIn = async (formData) => {
       console.log(response.data)
       return response.data;
     } catch (error) {
-      console.log(error.response.data);
-      throw new Error(error.response.data);
+      console.log(error.response);
+      throw new Error(error.response);
     }
   };

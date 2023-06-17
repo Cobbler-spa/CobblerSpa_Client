@@ -1,7 +1,18 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import '../styles/About.css'
+import ScrollReveal from 'scrollreveal';
 const Parallax = ({AboutData}) => {
     const { imgurl, title, logo}= AboutData;
+    useEffect(()=>{
+      const sr = ScrollReveal({
+        origin: "bottom",
+        duration: 2000,
+        distance: "80px",
+        reset: false,
+      });
+  
+      sr.reveal(`.imgContainer`, { opacity: 0, interval: 300 });
+    },[])
   return (
     <>
         <div class = "pimg" style={{backgroundImage : `url(${imgurl})`}}>   
