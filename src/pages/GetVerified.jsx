@@ -6,10 +6,9 @@ import {
   MDBCardFooter,
   MDBValidation,
   MDBBtn,
-  // MDBIcon,
-  // MDBSpinner,
   MDBValidationItem,
 } from "mdb-react-ui-kit";
+import ReactGa from 'react-ga'
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
@@ -29,6 +28,11 @@ const GetVerified = () => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
+
+
+  useEffect(()=>{
+    ReactGa.pageview(window.location.pathname)
+  },[])
 
   const sentOTP = async (e) => {
     e.preventDefault();
