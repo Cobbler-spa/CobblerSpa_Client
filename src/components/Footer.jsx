@@ -69,7 +69,10 @@ const Footer = () => {
 
             <MDBCol size="auto" className="mb-4 mb-md-0">
               <MDBBtn outline color="light" onClick={handleSubmit}>
-                Subscribe
+                {
+                  loading ? "Loading" : "Subscribe"
+                }
+                
               </MDBBtn>
             </MDBCol>
           </MDBRow>

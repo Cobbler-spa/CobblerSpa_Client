@@ -5,13 +5,11 @@ import {
   MDBCardTitle,
   MDBCardImage,
   MDBCardText,
-  MDBFooter,
   MDBBtn
 } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 
 const BlogCard = ({title, image, subtitle,_id}) => {
-  const truncatedSubtitle = subtitle.length > 25 ? `${subtitle.slice(0, 25)}...` : subtitle;
   return (
     <>
      <MDBCard alignment="center m-3 pb-2" className="blogBox" style={{height:"35rem",overflow:"hidden"}}>
