@@ -46,13 +46,15 @@ const OurServices = () => {
               position: "relative",
             }}
           >
-            <h3 style={{ textAlign: "center", zIndex: 1, color: "white", background:"black", width:"100%",padding:"4px 8px", fontFamily:"poppins" }}>
+            
+          </div>
+          <h3 style={{ zIndex: 1,textAlign:"center", color: "white", background:"black",width:"50%", margin:"auto",padding:"4px 8px", fontFamily:"poppins" }}>
               {item.title}
             </h3>
           </div>
-          </div>
         ))}
       </Slider>
+      
       <MDBBtn
         outline
         rounded

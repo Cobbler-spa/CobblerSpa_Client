@@ -18,7 +18,7 @@ const Parallax = ({AboutData}) => {
         <div class = "pimg" style={{backgroundImage : `url(${imgurl})`}}>   
         <div className='imgContainer'>
           {logo && <img src={logo} alt='logo' className='logoImg'/>}
-        <h3 className='title'>{title}</h3>
+        <h3 className='title' style={{textAlign:"center"}}>{title}</h3>
           {logo && <p style={{color:"white", letterSpacing:"4px", fontSize:"1rem"}}>Shoe & Bag Care</p>}
         </div>            
     </div>
