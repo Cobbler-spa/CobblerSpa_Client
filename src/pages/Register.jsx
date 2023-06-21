@@ -108,6 +108,7 @@ const Register = () => {
           alignContent: "center",
           backgroundColor: "rgba(12, 12, 12, 0.827)",
           display: "flex",
+          fontFamily:"poppins, oswald, sans-serif",
           justifyContent: "center",
           alignItems: "center",
         }}
@@ -126,7 +127,7 @@ const Register = () => {
             className="fa-2x"
             style={{ color: "black" }}
           />
-          <h5 style={{ color: "black", marginTop: "4px" }}>Sign Up</h5>
+          <h5 style={{ color: "black", marginTop: "4px", letterSpacing:"1px", textTransform:"uppercase" }}>Sign Up</h5>
           <MDBCardBody>
             <MDBValidation noValidate className="row g-3" onSubmit={handleSubmit}>
               <div className="col-md-6">

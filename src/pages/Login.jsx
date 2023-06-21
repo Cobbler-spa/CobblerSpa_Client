@@ -100,6 +100,7 @@ const Login = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          fontFamily:"poppins, oswald, sans-serif"
         }}
       >
         <MDBCard
@@ -118,7 +119,7 @@ const Login = () => {
             className="fa-2x"
             style={{ color: "black" }}
           />
-          <h5 style={{ color: "black  " }}>Sign In</h5>
+          <h5 style={{ color: "black  ",letterSpacing:"1px", textTransform:"uppercase" }}>Sign In</h5>
           <MDBCardBody>
             <MDBValidation
               noValidate

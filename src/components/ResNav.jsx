@@ -2,9 +2,13 @@ import React from "react";
 import "../styles/Navbar.css";
 import { FaUserCircle } from "react-icons/fa";
 import { setLogout } from "../redux/features/authSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {Link} from 'react-router-dom'
+
 const ResNav = ({ removeResMenu, showMenu }) => {
-  const user = JSON.parse(localStorage.getItem("user"));
+  // const user = JSON.parse(localStorage.getItem("user"));
+  const user = useSelector((state)=>({...state.auth}))
+
   const dispatch = useDispatch()
 
   const handleLogout= ()=>{
@@ -16,31 +20,47 @@ const ResNav = ({ removeResMenu, showMenu }) => {
       <ul className="Res_links">
         <li className="Res_link" onClick={() => removeResMenu()}>
           
-          Home
+          <Link className="Res_link" to="/">Home</Link>
         </li>
         <li className="Res_link" onClick={() => removeResMenu()}>
-          About Us
-        </li>
-        <li className="Res_link" onClick={() => removeResMenu()}>
+        <Link className="Res_link" to="/about">About Us</Link>
           
-          Services
         </li>
         <li className="Res_link" onClick={() => removeResMenu()}>
+        <Link className="Res_link" to="/services">Services</Link>
           
-          Our Work
+          
         </li>
         <li className="Res_link" onClick={() => removeResMenu()}>
+        <Link className="Res_link" to="/work">Our Work</Link>
           
-          Pricing
+          
         </li>
         <li className="Res_link" onClick={() => removeResMenu()}>
+        <Link className="Res_link" to="/pricing">Pricing</Link>
           
-         Contact
+          
         </li>
         <li className="Res_link" onClick={() => removeResMenu()}>
+        <Link className="Res_link" to="/contact">Contact</Link>
           
-          Policy
+         
         </li>
+        <li className="Res_link" onClick={() => removeResMenu()}>
+        <Link className="Res_link" to="/policy">Policy</Link>
+          
+          
+        </li>
+        {(user && user?.role==='admin') && (
+          <>
+          <li>
+        <Link className="Res_link" to="/addblog">Add Blog</Link>
+          </li>
+          <li>
+        <Link className="Res_link" to="/addadmin">Add Admin</Link>
+          </li>
+          </>
+        ) }
         <li className="Res_link">
               {
                 user ? (<>

@@ -82,7 +82,7 @@ const OurWork = () => {
     alignItems: "center",
     padding: "4rem",
     flexWrap: "wrap",
-    gap: "2rem",background: `url(${bg})`, backgroundAttachment:"fixed", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
+    gap: "2rem",background: "black", backgroundAttachment:"fixed", backgroundRepeat:"no-repeat", backgroundSize:"cover"}}>
          
          {renderCards()}
     </section>

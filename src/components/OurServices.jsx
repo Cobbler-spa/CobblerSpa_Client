@@ -21,6 +21,7 @@ const OurServices = () => {
     cssEase: "linear",
   });
 
+
   
 
   return (
@@ -60,7 +61,9 @@ const OurServices = () => {
         rounded
         color="dark"
         style={{ display: "block", margin: "auto", padding: "0.3rem 8rem", marginTop:"1rem  " }}
+        href="/services"
       >
+
         View Details
       </MDBBtn>
     </div>

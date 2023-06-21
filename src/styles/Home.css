@@ -13,26 +13,27 @@
 
 .book-now-button {
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   right: 0px;
   z-index: 9999;
   /* Adjust this value if necessary */
   /* Add any other styles you want for the button */
   padding: 0.1rem 1rem;
-  font-size: larger;
+  font-size: large;
   font-weight: 600;
-  font-family: "oswald", "poppins", "sans-serif";
-  letter-spacing: 1px;
+  font-family:  "poppins", "sans-serif";
+  letter-spacing: 0.2px;
   border: none;
   outline: none;
   border-radius: 40px;
-  margin: 0 0.5rem;
+  margin: 0 1rem;
   box-shadow: 1px 2px 4px 3px rgb(105, 105, 105);
 }
 .book-now-button .waBtn {
   font-size: 3rem;
   margin-right: 0.7rem;
   color: green;
+  border-radius: 6%;
 }
 
 #ServiceSection {

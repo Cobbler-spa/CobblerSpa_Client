@@ -110,6 +110,8 @@ const GetVerified = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          fontFamily:"poppins, oswald, sans-serif"
+
         }}
       >
         <MDBCard
